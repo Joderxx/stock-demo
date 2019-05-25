@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="admin.core.demo.mapper.SubscribeMapper">
+    <insert id="add">
+        insert into gmweb.subscribe(ts_code, username)
+        values (#{tsCode},#{username})
+    </insert>
+    <delete id="delete">
+        delete from gmweb.subscribe where username=#{username} and ts_code=#{tsCode}
+    </delete>
+
+    <select id="getSubscribe" resultType="java.lang.String">
+        select ts_code from gmweb.subscribe where username=#{username}
+    </select>
+</mapper>

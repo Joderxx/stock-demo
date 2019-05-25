@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="admin.core.demo.mapper.KnowledgeMapper">
+
+    <insert id="add">
+        insert into gmweb.knowledge( name, description)
+        values (#{name},#{description})
+    </insert>
+    <update id="update">
+        update gmweb.knowledge set name=#{name}, description=#{description}
+        where id=#{id}
+    </update>
+    <delete id="delete">
+        delete from gmweb.knowledge where id=#{id}
+    </delete>
+    <select id="getAll" resultType="admin.core.demo.model.Knowledge">
+        select * from gmweb.knowledge;
+    </select>
+</mapper>

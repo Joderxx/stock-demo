@@ -1,0 +1,74 @@
+package stock.task.model;
+
+import lombok.Data;
+
+@Data
+public class Income {
+    private Long id;
+    private String tsCode;
+    private String annDate;
+    private String fAnnDate;
+    private String endDate;
+    private String reportType;
+    private String compType;
+    private Double basicEps;
+    private Double dilutedEps;
+    private Double totalRevenue;
+    private Double revenue;
+    private Double intIncome;
+    private Double premEarned;
+    private Double commIncome;
+    private Double nCommisIncome;
+    private Double nOthIncome;
+    private Double nOthBIncome;
+    private Double premIncome;
+    private Double outPrem;
+    private Double unePremReser;
+    private Double reinsIncome;
+    private Double nSecTbIncome;
+    private Double nSecUwIncome;
+    private Double nAssetMgIncome;
+    private Double othBIncome;
+    private Double fvValueChgGain;
+    private Double investIncome;
+    private Double assInvestIncome;
+    private Double forexGain;
+    private Double totalCogs;
+    private Double operCost;
+    private Double intExp;
+    private Double commExp;
+    private Double bizTaxSurchg;
+    private Double sellExp;
+    private Double adminExp;
+    private Double finExp;
+    private Double assetsImpairLoss;
+    private Double premRefund;
+    private Double compensPayout;
+    private Double reserInsurLiab;
+    private Double divPayt;
+    private Double reinsExp;
+    private Double operExp;
+    private Double compensPayoutRefu;
+    private Double insurReserRefu;
+    private Double reinsCostRefund;
+    private Double otherBusCost;
+    private Double operateProfit;
+    private Double nonOperIncome;
+    private Double nonOperExp;
+    private Double ncaDisploss;
+    private Double totalProfit;
+    private Double incomeTax;
+    private Double nIncome;
+    private Double nIncomeAttrP;
+    private Double minorityGain;
+    private Double othComprIncome;
+    private Double tComprIncome;
+    private Double comprIncAttrP;
+    private Double comprIncAttrMS;
+    private Double ebit;
+    private Double ebitda;
+    private Double insuranceExp;
+    private Double undistProfit;
+    private Double distableProfit;
+
+}

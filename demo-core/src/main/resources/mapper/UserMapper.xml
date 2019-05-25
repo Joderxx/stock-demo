@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="admin.core.demo.mapper.UserMapper">
+    <insert id="add">
+        insert into gmweb.user(username, password, role1, role2, role3)
+        values(#{username},#{password},#{role1},#{role2},#{role3})
+    </insert>
+    <update id="update">
+        update gmweb.user
+        set role1 = #{role1},role2 = #{role2},role3 = #{role3}
+        where username=#{username}
+    </update>
+    <update id="updateAvatar">
+        update gmweb.user set avatar=#{avatar} where username=#{username}
+    </update>
+
+    <select id="getUser" resultType="admin.core.demo.model.User">
+        select user_id,username,role1,role2,role3
+        from gmweb.user
+        where username=#{username} and password=#{password}
+    </select>
+    <select id="getAvatar" resultType="admin.core.demo.model.User">
+        select avatar from gmweb.user where username=#{username}
+    </select>
+    <select id="exist" resultType="java.lang.Integer">
+        select count(1) from gmweb.user where username=#{username}
+    </select>
+    <select id="getByName" resultType="admin.core.demo.model.User">
+        select user_id,username,role1,role2,role3
+        from gmweb.user
+        where username=#{username}
+    </select>
+    <select id="getUsers" resultType="admin.core.demo.model.User">
+        select user_id,username,role1,role2,role3
+        from gmweb.user
+    </select>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="admin.core.demo.mapper.RoleMapper">
+
+
+    <select id="getRolesName" resultType="java.lang.String">
+        select name from gmweb.role where id in (${ids})
+    </select>
+    <select id="getRoles" resultType="admin.core.demo.model.Role">
+        select * from gmweb.role
+    </select>
+</mapper>
